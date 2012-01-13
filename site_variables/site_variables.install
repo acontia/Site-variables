@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install default variables used by Site variables module
+ *
+ */
+
+/**
+ * Implementation of hook_install
+ */
+function site_variables_install() {
+  module_load_include('module', 'site_variables');
+
+  variable_set('site_variables_base_menu_path', _site_variables_get_base_menu_path());
+  variable_set('site_variables_base_menu_title', _site_variables_get_base_menu_title());
+}
+
+/**
+ * Implementation of hook_uninstall
+ */
+function site_variables_uninstall() {
+  variable_del('site_variables_base_menu_path');
+  variable_del('site_variables_base_menu_title');
+}
+

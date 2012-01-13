@@ -1,0 +1,4 @@
+name = Site variables
+description = Provides to users with proper permissions a simple way to edit the site variables. The variables must be defined using hook_site_variables.
+core = 6.x
+project = "site-variables"
